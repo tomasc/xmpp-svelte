@@ -19,25 +19,36 @@
 </script>
 
 <style>
-
+  label {
+    display: block;
+  }
 </style>
 
 <div>
-  <p>
+  <label>
+    Service:
     <input bind:value={service} />
-  </p>
-  <p>
+  </label>
+
+  <label>
+    Domain:
     <input bind:value={domain} />
-  </p>
-  <p>
+  </label>
+
+  <label>
+    Resource:
     <input bind:value={resource} />
-  </p>
-  <p>
+  </label>
+
+  <label>
+    Username:
     <input bind:value={username} />
-  </p>
-  <p>
-    <input bind:value={password} />
-  </p>
+  </label>
+
+  <label>
+    Password:
+    <input type="password" bind:value={password} />
+  </label>
 
   <button on:click={handleSubmitButtonClick}>Submit</button>
 </div>

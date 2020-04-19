@@ -14,9 +14,10 @@ export function storeCredentials() {
 
 export function restoreCredentials() {
   let obj = {};
-  credentialKeys.forEach((key) =>
-    obj[key] = localStorage.getItem(`xmpp-svelte-credentials-${key}`)
-  );
+  credentialKeys.forEach(function (key) {
+    let value = localStorage.getItem(`xmpp-svelte-credentials-${key}`)
+    if (value !== null) { obj[key] = value };
+  });
   if (Object.keys(obj).length === credentialKeys.length) {
     credentials.set(obj)
   }
