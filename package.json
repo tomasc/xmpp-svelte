@@ -1,0 +1,40 @@
+{
+  "name": "@tomasc/xmpp-svelte",
+  "description": "XMPP Svelte",
+  "version": "0.0.1",
+  "private": false,
+  "repository": {
+    "url": "git@github.com:tomasc/xmpp-svelte.git",
+    "type": "git"
+  },
+  "main": "package/main.js",
+  "files": [
+    "package"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js --open"
+  },
+  "author": "Tomáš Celizna <mail@tomascelizna.com>",
+  "devDependencies": {
+    "css-loader": "^3.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules": "^1.4.1",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@xmpp/client": "^0.11.1",
+    "@xmpp/debug": "^0.11.0",
+    "svelte": "^3.16.0",
+    "svelte-loader": "^2.13.6",
+    "svelte-preprocess": "^3.2.6"
+  }
+}
