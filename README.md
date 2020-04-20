@@ -3,7 +3,7 @@
 ## Getting started
 
 1. install [yarn](https://yarnpkg.com)
-2. run `yarn` to install JavaScript packages defined in `package.json`
+2. run `yarn install` to install JavaScript packages defined in `package.json`
 3. run `yarn start` to start development server that will rebuild the JavaScript code and reload your browser
 
 ## Sharing the chat with someone else
