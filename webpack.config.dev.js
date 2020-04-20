@@ -8,7 +8,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
+    contentBase: path.resolve(__dirname, 'dev'),
     compress: true,
     // does not work for Svelte 3, yet
     // @see: https://github.com/sveltejs/svelte-loader/issues/74
@@ -20,7 +20,7 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, 'public/index.html'),
+      template: path.resolve(__dirname, 'dev/index.html'),
     })
   ],
 });

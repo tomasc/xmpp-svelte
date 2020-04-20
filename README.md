@@ -9,4 +9,4 @@
 ## Sharing the chat with someone else
 
 1. Run `yarn build` to compile your code to `package` folder
-2. You will only need the `package` and `public` folders to share them with someone else. They can then open the `public/index.html` folder and get going with your chat.
+2. You will only need the `package` folder to share your chat with someone else. They can then open the `package/index.html` file in their browser and get going with your chat.
