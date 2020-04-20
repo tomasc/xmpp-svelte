@@ -1,8 +1,9 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { credentials, storeCredentials, resetCredentials, messages } from "./stores.js"
+  import { credentials, storeCredentials, resetCredentials } from "./stores.js"
+  import { stanzas } from "./stores.js"
 
-  import MessagesComponent from "./messages_component.svelte"
+  import ChatRoomComponent from "./chat_room_component.svelte"
   import MessageInputComponent from "./message_input_component.svelte"
 
   const { client, xml } = require("@xmpp/client");
@@ -21,9 +22,7 @@
   });
 
   xmpp.on("stanza", async (stanza) => {
-    if (stanza.is("message")) {
-      messages.update(n => n.concat([stanza]))
-    }
+    stanzas.update(n => n.concat([stanza]))
   });
 
   xmpp.on("online", async (address) => {
@@ -55,11 +54,10 @@
 </script>
 
 <style>
-
 </style>
 
 <section>
-  <MessagesComponent />
+  <ChatRoomComponent />
   <MessageInputComponent on:message={handleMessage} />
   <aside>
     {$credentials.username}

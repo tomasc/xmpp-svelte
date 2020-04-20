@@ -1,7 +1,7 @@
 import { get, readable, writable } from "svelte/store";
 
 export const credentials = writable();
-export const messages = writable([]);
+export const stanzas = writable([]);
 
 let credentialKeys = ["service", "domain", "resource", "username", "password"];
 
