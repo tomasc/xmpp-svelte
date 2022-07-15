@@ -33,7 +33,7 @@
   "dependencies": {
     "@xmpp/client": "^0.11.1",
     "@xmpp/debug": "^0.11.0",
-    "svelte": "^3.16.0",
+    "svelte": "^3.49.0",
     "svelte-loader": "^2.13.6",
     "svelte-preprocess": "^3.2.6"
   }
